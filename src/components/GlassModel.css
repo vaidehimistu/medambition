@@ -1,0 +1,95 @@
+/* ===== BLUE GLASS MODAL STYLE ===== */
+
+.glass-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 44, 88, 0.45);
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.glass-modal {
+  width: 450px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  padding: 25px 30px;
+  animation: popupFade 0.25s ease-out;
+  position: relative;
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glass-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.glass-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.glass-content {
+  margin-top: 12px;
+}
+
+.glass-content table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.glass-content table th,
+.glass-content table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-content input,
+.glass-content select,
+.glass-content textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
