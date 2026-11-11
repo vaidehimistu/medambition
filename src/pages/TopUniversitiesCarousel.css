@@ -1,0 +1,182 @@
+/* University Carousel Section with Gradient Background */
+
+.university-carousel-section {
+  padding: 5rem 6%;
+  background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft animated radial background */
+.university-carousel-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0, 115, 230, 0.07), transparent 70%);
+  animation: floatBg 10s infinite linear;
+  z-index: 0;
+}
+
+/* Title with gradient text */
+.carousel-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #012e61, #0056b3, #00bfa6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtitle */
+.carousel-description {
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Country Chips */
+.top-countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.country-chip {
+  background: linear-gradient(135deg, #e6f0ff, #ffffff);
+  border: 1px solid #0073e6;
+  color: #012e61;
+  padding: 0.75rem 1.25rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.country-chip:hover,
+.country-chip.active {
+  background: linear-gradient(135deg, #0073e6, #0056b3);
+  color: #fff;
+  cursor: pointer;
+  border-color: #0056b3;
+}
+
+/* University Cards */
+.university-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  animation: fadeUp 0.6s ease both;
+}
+
+/* Soft hover effect */
+.university-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 115, 230, 0.15);
+}
+
+/* Card Image */
+.university-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Card Title with gradient */
+.university-card h3 {
+  font-size: 1.1rem;
+  padding: 1rem;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(90deg, #012e61, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Swiper Controls */
+.swiper {
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background: #012e61;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #0073e6;
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 1.6rem;
+  }
+
+  .carousel-description {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .university-card img {
+    height: 170px;
+  }
+
+  .university-card h3 {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .country-chip {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .university-carousel-section {
+    padding: 2.5rem 1rem;
+  }
+}

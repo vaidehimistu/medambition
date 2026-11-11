@@ -1,0 +1,324 @@
+.steps-wrapper {
+  padding: 4rem 6%;
+  background-color: #111; /* dark background */
+  text-align: center;
+  color: #fff;
+}
+
+.steps-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.steps-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.7;
+}
+
+/* Grid layout */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Step card with animated rainbow border */
+.step-card {
+  position: relative;
+  background-color: #111;
+  border-radius: 12px;
+  padding: 2rem;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Rainbow border effect using pseudo-element */
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(90deg, #ffd700, #ff4d4f, #00f5ff, #ffd700, #ff4d4f);
+  background-size: 400% 400%;
+  z-index: 0;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: rainbowBorder 4s linear infinite;
+}
+
+/* Inner content stays above the border */
+.step-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect */
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px red;
+}
+
+/* Step number */
+.step-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+/* Step title */
+.step-title {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Step description */
+.step-desc {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Rainbow border animation */
+@keyframes rainbowBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .steps-title {
+    font-size: 2rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-desc {
+    font-size: 0.95rem;
+  }
+}
+/* Smaller step card with rainbow border */
+.step-card {
+  position: relative;
+  background-color: #111; /* dark card for contrast */
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem; /* smaller padding */
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px; /* optional: keep height consistent */
+}
+
+/* Thicker rainbow border using pseudo-element */
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 16px;
+  padding: 4px; /* thickness of border */
+  background: linear-gradient(90deg, #ffd700, #ff4d4f, #00f5ff, #ffd700, #ff4d4f);
+  background-size: 400% 400%;
+  z-index: 0;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: rainbowBorder 4s linear infinite;
+}
+
+/* Step card content should be above the border */
+.step-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animate the rainbow border */
+@keyframes rainbowBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Step number and text styling (optional tweaks for small card) */
+.step-number {
+  font-size: 1.6rem;
+  color: #000; /* yellow */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  color: #fff; /* white for contrast */
+  margin-bottom: 0.5rem;
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+/* StepsSection.css */
+
+/* Wrapper section */
+.steps-wrapper {
+  padding: 4rem 6%;
+  background-color: #fff; /* Dark background */
+  color: #fff;
+  text-align: center;
+}
+
+/* Title and subtitle */
+.steps-title {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.steps-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.7;
+}
+
+/* Grid layout */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Step card styling */
+.step-card {
+  position: relative;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+  min-height: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+/* Rainbow moving border */
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #ffd700, #fff, #ffd700, #fff, #ffd700);
+  background-size: 300% 300%;
+  z-index: 0;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: rainbowBorder 3s linear infinite;
+}
+
+/* Make card content above the border */
+.step-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Step number */
+.step-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+/* Step title */
+.step-title {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Step description */
+.step-desc {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Rainbow border animation */
+@keyframes rainbowBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px red;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .steps-title {
+    font-size: 2rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-desc {
+    font-size: 0.95rem;
+  }
+}
+/* Title and subtitle */
+.steps-title {
+  font-size: 2.5rem;
+  color: #000; /* black text */
+  margin-bottom: 0.5rem;
+}
+
+.steps-subtitle {
+  font-size: 1.1rem;
+  color: #000; /* black text */
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.7;
+}
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000 !important; /* black */
+  margin-bottom: 1rem;
+}
+
+
+

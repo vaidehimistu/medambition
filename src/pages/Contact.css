@@ -1,0 +1,174 @@
+/* ===============================
+   CONTACT FOOTER
+================================= */
+.contact-footer {
+  background-color: #0f0f0f; /* dark black background */
+  color: #ccc; /* fallback text color */
+  padding: 3rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Blue gradient heading */
+.contact-footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00aaff, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Paragraphs */
+.contact-footer p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Links */
+.contact-footer a {
+  color: #00aaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-footer a:hover {
+  color: #00d4ff;
+  text-decoration: underline;
+}
+
+/* Optional subtle floating gradient background */
+.contact-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0,170,255,0.05), transparent 70%);
+  animation: floatBg 12s infinite linear;
+  z-index: 0;
+}
+
+/* Keep content above floating gradient */
+.contact-footer * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating animation keyframes */
+@keyframes floatBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-footer h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-footer p {
+    font-size: 0.95rem;
+  }
+}
+/* ===============================
+   CONTACT FOOTER (Blue Gradient Text)
+================================= */
+.contact-footer {
+  background-color: #0f0f0f; /* dark black background for contrast */
+  padding: 3rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient heading like "Top Medical Universities Abroad" */
+.contact-footer h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #00aaff, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Paragraphs with same blue gradient */
+.contact-footer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  background: linear-gradient(90deg, #00aaff, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Links with same gradient and hover effect */
+.contact-footer a {
+  font-weight: 500;
+  background: linear-gradient(90deg, #00aaff, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-footer a:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* Optional subtle floating gradient background (soft animated glow) */
+.contact-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0,170,255,0.07), transparent 70%);
+  animation: floatBg 12s infinite linear;
+  z-index: 0;
+}
+
+/* Keep content above floating gradient */
+.contact-footer * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating animation keyframes */
+@keyframes floatBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-footer h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-footer p {
+    font-size: 0.95rem;
+  }
+}
