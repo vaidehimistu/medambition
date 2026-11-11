@@ -17,7 +17,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/medambition">
       <div className="app-container">
         <Header />
         <main className="main-content">
