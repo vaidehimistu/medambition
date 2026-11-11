@@ -1,7 +1,7 @@
 {
   "name": "route-my-career",
   "version": "0.1.0",
-  "homepage": "https://vaidehimistu.github.io/medambition"
+  "homepage": "https://vaidehimistu.github.io/medambition",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
